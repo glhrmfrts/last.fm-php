@@ -109,7 +109,15 @@ class LastFm
 		}
 	}
 
-	public function createApi($name, $config)
+	/**
+	 * Creates a new api from the ApiModel
+	 *
+	 * @method createApi
+	 * @param {string} The name of this api
+	 * @param {object} An object containing some goods like the account key and the url prefix
+	 * @return {object(ApiModel)} The api itself
+	 */
+	private function createApi($name, $config)
 	{
 		if ($name == "url_prefix")
 			return;
@@ -119,11 +127,23 @@ class LastFm
 		return $api;
 	}
 
+	/**
+	 * Get the api account key
+	 *
+	 * @method getApiKey
+	 * @return {string} The account's key
+	 */
 	public function getApiKey()
 	{
 		return $this->apiKey;
 	}
 
+	/**
+	 * Get the url prefix for the whole api
+	 *
+	 * @method getUrlPrefix
+	 * @return {string} The url prefix
+	 */
 	public function getUrlPrefix()
 	{
 		return $this->urlPrefix;
