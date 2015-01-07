@@ -26,14 +26,14 @@ class ApiModel {
 	 * This will handle all api's methods calls
 	 *
 	 * @method __call
-	 * @return {string} The api response
+	 * @return {object} The api response
 	 */
 	public function __call($method, $args)
 	{
 		$url = $this->createUrl($method, $args);
 		$call = file_get_contents($url);
 
-		return $call;
+		return json_decode($call, true);
 	}
 
 	/**
