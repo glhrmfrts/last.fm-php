@@ -12,6 +12,7 @@ $cherTracks = $lastfm->artist->getTopTracks(array('artist' => 'Cher'));
 
 $topHouseArtists = $lastfm->tag->getTopArtists(array('tag' => 'house'));
 ```
+Every method will return an associative array.
 
 Danke!
 
