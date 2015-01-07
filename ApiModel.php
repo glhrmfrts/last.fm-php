@@ -24,6 +24,9 @@ class ApiModel {
 
 	/**
 	 * This will handle all api's methods calls
+	 *
+	 * @method __call
+	 * @return {string} The api response
 	 */
 	public function __call($method, $args)
 	{
@@ -51,7 +54,6 @@ class ApiModel {
 
 		$url .= '?'.http_build_query($query);
 
-		var_dump($url);
 		return $url;
 	}
 }
