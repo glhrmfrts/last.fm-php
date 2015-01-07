@@ -1,6 +1,6 @@
 <?php
 
-require('apimodel.class.php');
+require('ApiModel.php');
 
 /**
  * This class is a helper for all last.fm's api methods
