@@ -26,7 +26,7 @@ class ApiModel {
 	 * This will handle all api's methods calls
 	 *
 	 * @method __call
-	 * @return {object} The api response
+	 * @return {array} The api response
 	 */
 	public function __call($method, $args)
 	{
